@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+}
+body{
+    background-color: var(--VeryDarkBlue);
+    padding: 2rem;
+}
+:root{
+--LimeGreen: hsl(163, 72%, 41%);
+--BrightRed: hsl(356, 69%, 56%);
+--Facebook: hsl(208, 92%, 53%);
+--Twitter: hsl(203, 89%, 53%);
+--Instagram: linear-gradient (red,yellow);
+--YouTube: hsl(348, 97%, 39%);
+/*Dark Theme*/
+--ToggleD: linear gradient hsl(210, 78%, 56%), hsl(146, 68%, 55%);
+/*Light Theme*/
+--Toggle: hsl(230, 22%, 74%);
+/*Dark Theme*/
+--VeryDarkBlue: hsl(230, 17%, 14%);
+--VeryDarkBlue: hsl(232, 19%, 15%);
+--DarkDesaturatedBlue: hsl(228, 28%, 20%);
+--DesaturatedBlue: hsl(228, 34%, 66%);
+--White: hsl(0, 0%, 100%);
+/*Light Theme*/
+--White: hsl(0, 0%, 100%);
+--VeryPaleBlue: hsl(225, 100%, 98%);
+--LightGrayishBlu: hsl(227, 47%, 96%);
+--DarkGrayishBlue: hsl(228, 12%, 44%);
+--VeryDarkBlue: hsl(230, 17%, 14%);
+--font: 'Inter', sans-serif;
+}
+/*global styles*/
+.mainP{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.sub{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--DesaturatedBlue);
+    padding: 0.5rem 0;
+}
+.subP{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: var(--DesaturatedBlue);
+    padding-bottom: 1rem;
+}
+.secondaryP{
+    font-weight: 300;
+    color: var(--DesaturatedBlue);
+}
+.secondaryP2{
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--DesaturatedBlue);
+}
+.mainP2{
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: var(--White);
+}
+.secondaryP3{
+    font-weight: 500;
+    font-size: 14px;
+}
+.up{
+    color: var(--LimeGreen);
+}
+.down{
+    color: var(--BrightRed);
+}
+/*dark mode*/
+.head .mainP{
+    color: white;
+    text-align: left;
+}
+.mode-toggle{
+    display: flex;
+    justify-content: space-between;
+}
+.toggle{
+    background-color:var(--DesaturatedBlue);
+    width: fit-content;
+    height: 25px;
+    border-radius: 15px;
+    padding: 1px 5px 0.5rem;
+    display: flex;
+    justify-content:space-evenly;
+    margin:5px 1rem;
+    cursor: pointer;
+}
+.light.toggle{
+    background-color: black;
+}
+.btn{
+    background-color: var(--VeryDarkBlue);
+    height:20.7px;
+    width: 25px;
+    border: none;
+    border-radius: 50%;
+    margin:1px 0 0 0;
+    cursor: pointer;
+    visibility: hidden;
+}
+.btn.active{
+    visibility: visible;
+}
+/*sections*/
+.section{
+    text-align: center;
+    
+}
+.section-grid,.section2-grid{
+    padding: 2rem 0;
+    background-color: var(--DarkDesaturatedBlue);
+    margin: 1.5rem 0;
+    border-radius: 5px;
+}
+.media-icon{
+    display: flex;
+    justify-content: center;
+}
+.media-icon img{
+    padding:0 0.5rem ;
+}
+/*top grids*/
+.facebook{
+    border-top: 5px solid var(--Facebook);
+}
+.instagram{
+    border-top: 5px solid #e66465;
+}
+.twitter{
+    border-top: 5px solid var(--Twitter);
+}
+.youtube{
+    border-top: 5px solid var(--YouTube);
+}
+/*overview grid*/
+.section-2 .mainP{
+    color: white;
+    text-align: left;
+}
+.section2-grid{
+    display: flex;
+    justify-content: space-between;
+    padding:2rem 1rem;
+}
+.section2-grid .followers-change{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.section2-grid .followers-change img{
+    height:100%;
+    padding: 0.5rem 4px;
+}
+.light.mainP2{
+    color: black;
+}
+/*light mode*/
+body.light{
+    background-color: var(--LightGrayishBlu);
+}
+.light.section-grid,.light.section2-grid{
+    background-color: var(--White);
+}
+.light.mainP{
+    color: black;
+}
+.light.sub,.light.secondaryP,.secondaryP2,.light.subP{
+    color: var(--DarkGrayishBlue);
+}
+
+/*media query*/
+@media screen and (min-width:768px){
+    body{
+        padding: 2rem 5rem;
+    }
+    .section-a,.section-2-grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 2rem;
+    }
+    .section2-grid{
+        padding: 1rem;
+    }
+    .head{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
